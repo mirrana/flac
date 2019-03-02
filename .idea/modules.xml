@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flac.iml" filepath="$PROJECT_DIR$/.idea/modules/flac.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flac_main.iml" filepath="$PROJECT_DIR$/.idea/modules/flac_main.iml" group="flac" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flac_test.iml" filepath="$PROJECT_DIR$/.idea/modules/flac_test.iml" group="flac" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.abopu.flac.iml" filepath="$PROJECT_DIR$/.idea/modules/com.abopu.flac.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.abopu.flac.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.abopu.flac.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.abopu.flac.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.abopu.flac.test.iml" />
     </modules>
   </component>
 </project>
