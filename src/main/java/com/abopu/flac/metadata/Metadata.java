@@ -1,11 +1,9 @@
-package com.abopu.flac.headers;
-
-import java.io.InputStream;
+package com.abopu.flac.metadata;
 
 /**
- * @author Chris Babstock &lt;cbabstock@compusult.net&gt;
+ * @author Sarah Skanes &lt;agent154@abopu.comt&gt;
  */
-public abstract class Header {
+public abstract class Metadata {	
 
 	/***************************************************************************
 	 *
@@ -23,7 +21,7 @@ public abstract class Header {
 	 *
 	 **************************************************************************/
 
-	public Header(Type type) {
+	public Metadata(Type type) {
 		this.type = type;
 	}
 
@@ -42,7 +40,8 @@ public abstract class Header {
     SEEKTABLE((byte) 0b11),
     VORBIS_COMMENT((byte) 0b100),
     CUESHEET((byte) 0b101),
-    PICTURE((byte) 0b110);
+    PICTURE((byte) 0b110),
+		INVALID((byte) 0b01111111);
 
 		private byte id;
 

@@ -1,15 +1,11 @@
-package com.abopu.flac.headers;
+package com.abopu.flac.metadata;
 
-import com.abopu.flac.headers.Header;
-
-import java.math.BigInteger;
-import java.nio.ByteBuffer;
-import java.util.Arrays;
+import com.abopu.flac.MD5Hash;
 
 /**
- * @author Chris Babstock &lt;cbabstock@compusult.net&gt;
+ * @author Sarah Skanes &lt;agent154@abopu.comt&gt;
  */
-public class StreamInfo extends Header {
+public class StreamInfo extends Metadata {
 
 	private Short minBlockSize;
 	private Short maxBlockSize;
@@ -38,15 +34,15 @@ public class StreamInfo extends Header {
 	@Override
 	public String toString() {
 		return "StreamInfo{" +
-				"minBlockSize=" + BigInteger.valueOf(minBlockSize) +
-				", maxBlockSize=" + BigInteger.valueOf(maxBlockSize) +
-				", minFrameSize=" + BigInteger.valueOf(minFrameSize) +
-				", maxFrameSize=" + BigInteger.valueOf(maxFrameSize) +
-				", sampleRate=" + BigInteger.valueOf(sampleRate) +
-				", numChannels=" + BigInteger.valueOf(numChannels) +
-				", bitsPerSample=" + BigInteger.valueOf(bitsPerSample) +
-				", totalSamples=" + BigInteger.valueOf(totalSamples) +
-				", md5=" + Arrays.toString(md5) +
+				"minBlockSize=" + Short.toUnsignedLong(minBlockSize) +
+				", maxBlockSize=" + Short.toUnsignedLong(maxBlockSize) +
+				", minFrameSize=" + Integer.toUnsignedLong(minFrameSize) +
+				", maxFrameSize=" + Integer.toUnsignedLong(maxFrameSize) +
+				", sampleRate=" + Integer.toUnsignedLong(sampleRate) +
+				", numChannels=" + Byte.toUnsignedLong(numChannels) +
+				", bitsPerSample=" + Byte.toUnsignedLong(bitsPerSample) +
+				", totalSamples=" + (totalSamples & 0x0000000FFFFFFFFFL) +
+				", md5=" + MD5Hash.toHexString(md5) +
 				'}';
 	}
 }
